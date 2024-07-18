@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "esModuleInterop": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true,
+        "module": "NodeNext",
+        "target": "ES2015",
+        "types": ["jest"]
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+}
