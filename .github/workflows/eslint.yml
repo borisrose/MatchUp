@@ -1,0 +1,29 @@
+name: Eslint Check
+run-name: ${{ github.actor }} is running the Eslint Check
+on:
+  push:
+    branches:
+      - dev
+permissions:
+  contents: read
+jobs:
+  eslint-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting the App on The Executor VM
+        uses: actions/checkout@v4
+      - name: Installing Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - name: Installing Dependencies
+        run: |
+          npm install
+      - name: Running Eslint
+        id: eslint
+        run: npm run lint
+      - name: Conclusion
+        if: ${{ success() && steps.eslint.conclusion == 'success' }}
+        run: |
+          echo "✅ All Good"

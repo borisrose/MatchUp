@@ -1,0 +1,9 @@
+{
+  "arrowParens": "avoid",
+  "proseWrap": "preserve",
+  "tabWidth": 2,
+  "htmlWhitespaceSensitivity": "css",
+  "printWidth": 80,
+  "semi": false,
+  "trailingComma": "none"
+}

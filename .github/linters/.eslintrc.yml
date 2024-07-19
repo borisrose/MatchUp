@@ -1,0 +1,48 @@
+env:
+  commonjs: true
+  es6: true
+  jest: true
+  node: true
+
+ignorePatterns:
+  - "!.*"
+  - "**.test.ts"
+  - "**.spec.ts"
+  - "**/node_modules/.*"
+  - "**/dist/.*"
+  - "**/coverage/.*"
+  - "**/__test__/.*"
+
+parser: "@typescript-eslint/parser"
+
+parserOptions:
+  ecmaVersion: 2023
+  sourceType: module
+  requireConfigFile: false
+  project: "./tsconfig.json"
+
+plugins:
+  - "@typescript-eslint"
+  - jest
+  - prettier
+
+extends:
+  - eslint:recommended
+  # -plugin:@typescript-eslint/recommended
+  - plugin:github/recommended
+  - plugin:jest/recommended
+
+rules:
+  camelcase: "off"
+  prettier/prettier: "error"
+  import/no-anonymous-default-export: "off"
+  import/no-commonjs: "off"
+  eslint-comments/no-use: "off"
+  eslint-plugin-import/no-anonymous-default-export: "off"
+  eslint-comments/no-unlimited-disable: "off"
+  no-unused-vars: "off"
+  no-undef: "off"
+  eqeqeq: "off"
+  no-console: "off"
+  github/no-then: "off"
+  prefer-template: "off"
