@@ -1,5 +1,6 @@
 // router.ts
 import homeView from "./src/ts/views/home-view/home-view"
+import Button from "./src/ts/components/button/button"
 
 /* 
 

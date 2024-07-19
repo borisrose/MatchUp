@@ -12,6 +12,7 @@ interface ButtonProps {
 
 // en typescript on peut préciser le type de toutes les variables, de toutes les valeurs qu'elles contiennent si vous préférez.
 export default function (d: ButtonProps): string {
+    const textContent = "Se connecter"
   // vu que cette fonction retourne une chaîne de caractères (string) je l'ai précisé dans la signature de la fonction ( la partie juste au-dessus de ce commentaire)
 
   return `
