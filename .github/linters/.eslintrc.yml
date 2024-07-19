@@ -46,3 +46,4 @@ rules:
   no-console: "off"
   github/no-then: "off"
   prefer-template: "off"
+  i18n-text/no-en: "off"

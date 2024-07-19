@@ -1,27 +1,21 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-color: black;
-    font-family: "Poppins";
-}
+@use "../abstracts/keyframes";
 
 .home__main {
-    height: 100vh;
-    border: solid red 2px;
     background-image: url('/assets/images/bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     transition:  ease-in-out;
-    animation: fadeInBackground 1.5s ease-in-out forwards;
+    animation: fade-in-background 1.5s ease-in-out forwards;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    button {
+        align-self: center;
+    }
+
+
 }
 
-@keyframes fadeInBackground {
-    00% {
-        opacity: 0.4;
-    }
-    100% {
-        opacity: 1;
-    }
-}

@@ -1,6 +1,7 @@
 // router.ts
 import homeView from "./src/ts/views/home-view/home-view"
 import Button from "./src/ts/components/button/button"
+import HomeContainer from "./src/ts/containers/home-container/home-container"
 
 /* 
 
@@ -54,6 +55,7 @@ function navigateToPage(h: string): void {
       // donc on va considérer que le contenu de l'élément HTML ayant l'id root sera cette vue home-view
 
       root.innerHTML += homeView()
+      new HomeContainer()
 
       break // le break évite qu'on bascule dans le cas suivant et que donc on exécute les instructions du cas suivant
     case "#login":
