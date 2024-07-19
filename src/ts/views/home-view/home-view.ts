@@ -4,7 +4,7 @@
 */
 
 export default function () {
-  const message = "Bienvenue sur MatchUp"
+  const message = ""
 
   // vous pouvez observer que si j'ai envie de mettre une variable dans la chaîne de caractères ci-dessous je dois utiliser ${} ce qui caractérise une interpolation, cette idée que ce que vous voyez message ne sera pas ce que vous allez voir au final: "Bienvenue sur MatchUp"
 
@@ -13,4 +13,6 @@ export default function () {
             <h1>${message}</h1>
         </main>
     `
+    
 }
+
