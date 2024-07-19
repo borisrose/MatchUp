@@ -14,7 +14,10 @@ export default class HomeContainer {
     })
 
     setTimeout(() => {
-        this.homeMain.innerHTML = ""
+      this.homeMain.innerHTML = button({
+        textContent: "Se connecter",
+        id: "home-login-button"
+      })
     }, 3000)
   }
 }
