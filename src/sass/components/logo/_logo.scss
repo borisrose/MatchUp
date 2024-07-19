@@ -1,4 +1,21 @@
-.home__main {
+.logo {    
+    border:solid green 2px;
+    background-image: url(/assets/images/logo.png);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 120px;
+    height: 120px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
 
-   
+}
+@keyframes moveToCenter {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

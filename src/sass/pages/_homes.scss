@@ -1,3 +1,11 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: black;
+    font-family: "Poppins";
+}
+
 .home__main {
     height: 100vh;
     border: solid red 2px;
@@ -5,4 +13,15 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition:  ease-in-out;
+    animation: fadeInBackground 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInBackground {
+    00% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
 }

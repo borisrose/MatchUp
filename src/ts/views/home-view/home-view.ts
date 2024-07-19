@@ -11,6 +11,7 @@ export default function () {
   return `
         <main class="main home__main">
             <h1>${message}</h1>
+            <img class="logo"/>
         </main>
     `
     
