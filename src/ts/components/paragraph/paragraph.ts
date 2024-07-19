@@ -1,10 +1,12 @@
 interface ParagraphProps {
-    textContent: string
+  textContent: string
+  classNames?: string
 }
 
-export default function(d: ParagraphProps){
-    return(
-        `  <p class="paragraph">${d.textContent}</p>
+export default function ({ classNames, textContent }: ParagraphProps) {
+  return `  <p 
+    data-testid="paragraph"
+    class="paragraph ${classNames ? classNames : ""}">
+    ${textContent}</p>
         `
-    )
 }
