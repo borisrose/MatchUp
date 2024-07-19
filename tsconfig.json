@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "checkJs": true,
-    "esModuleInterop": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true,
-    "module": "NodeNext",
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "esModuleInterop": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true,
+        "module": "NodeNext",
     "target": "ES2023",
-    "types": ["jest"]
-  },
+        "types": ["jest"]
+    },
   "include": ["src/**/*.ts", "babel.config.js", "webpack.config.js"],
-  "exclude": ["node_modules"]
+    "exclude": ["node_modules"]
 }
