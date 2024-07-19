@@ -11,9 +11,10 @@ export default function () {
   return `
         <main class="main home__main">
             <h1>${message}</h1>
-            <img class="logo"/>
+            <img 
+                class="logo"
+                src="/assets/images/logo.png" alt="logo de l'application"
+            />
         </main>
     `
-    
 }
-
