@@ -3,3 +3,5 @@ documents/**/*.*
 !documents/**/*.tex
 !documents/**/*.pdf
 !documents/**/*.qmd
+.DS_Store
+.vscode
