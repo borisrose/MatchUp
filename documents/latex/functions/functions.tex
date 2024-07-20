@@ -1,0 +1,132 @@
+\documentclass[a4paper, 12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[breakable, listings, skins]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{listings}
+
+\lstdefinestyle{mainlststyle}{
+    style=tcblatex,
+    texcsstyle=*\color{blue}, % Exemple de style pour texcsstyle
+    commentstyle=\color{green}, % Exemple de style pour commentstyle
+    tabsize=4,
+    keepspaces=true,
+    breaklines=true,
+    breakatwhitespace=false,
+    numbers=none,
+    showspaces=false,
+    showtabs=false,
+    showstringspaces=false,
+    basicstyle=\ttfamily, % Utiliser la police à chasse fixe pour tout le code
+    literate=
+      {à}{{\`a}}1
+      {â}{{\^a}}1
+      {é}{{\'e}}1
+      {è}{{\`e}}1
+      {ê}{{\^e}}1
+      {î}{{\^i}}1
+      {ô}{{\^o}}1
+      {ù}{{\`u}}1
+      {û}{{\^u}}1
+      {ç}{{\c{c}}}1
+      {`}{\textasciigrave}1 % gestion des backticks
+}
+
+
+\begin{document}
+
+\everymath{\displaystyle}
+\title{\textbf{Les fonctions} \\ \textit{Moduler son code avec les fonctions}}
+\author{Boris \textsc{Rose} \\ Concepteur Logiciel}
+\date{\today}
+
+\newcommand{\bshow}[1]{\textcolor{cyan}{#1}}
+
+
+\maketitle
+
+\begin{abstract}
+Nous verrons ici ce qu'est une fonction, qu'elle peut admettre ou non des paramètres. 
+Nous verrons les fonctions impures (à effets de bord) et les fonctions pures. Nous seront donc ici dans le cadre d'une programmation fonctionnelle (procédurale) avec des fonctions alors que nous verrons dans le cours relatif aux classes , une programmation orientée objet, une classe étant par définition un objet
+\end{abstract}
+
+
+\section[short]{Définition d'une fonction}
+
+\paragraph{Un morceau de code}
+Une fonction est un morceau de code constitué d'une ou plusieurs instructions afin d'aboutir en tout ou partie à la résolution d'un problème donné.
+
+\paragraph{les fonctions en mathématique}
+
+\(f : x \mapsto ax + b\)
+
+En programmation, vous aurez une fonction qui peut accepter un paramètre, en l'occurence $x$ et qui va faire quelque chose de sa valeur dans une situation déterminée $x = 5$ pour ensuite en fonction de celle-ci retourner un résultat $ax+b$
+
+\paragraph{Différence majeure}
+Le fait est qu'en programmation une fonction n'a pas nécessairement besoin d'un x pour retourner un résultat et que d'ailleurs elle peut ne pas en retourner quelle que soit la situation (avec ou sans paramètre)
+
+
+\section[short]{Définir une fonction en javascript}
+
+\begin{lstlisting}[style=mainlststyle]
+    /* 
+        nous sommes dans le fichier home-view.js
+    */
+
+    
+    function homeView () {
+       return `
+            <main>
+                <h1>Home View</h1>
+            </main>
+       `
+    }
+
+    export default homeView
+    // 
+
+\end{lstlisting}
+
+\paragraph{Explications}
+
+le mot clé function me permet de définir une fonction autrement dit d'expliquer à la machine comme elle fonctionne, si elle accepte ou non des paramères, le traitement qu'elle doit opérer avec les paramètres et le résult qu'elle retourne ou pas
+
+\paragraph{Fonction pure}
+Il s'agit d'une fonction pure à chaque fois qu'elle est appelée elle va retourner le même résultat et elle n'agit pas à l'extérieur d'elle-même (aucun effet de bord)
+
+\paragraph{Appel de cette fonction}
+La function homeView() est définie ci-dessus mais pour l'utiliser et donc qu'elle retourne le résultat en l'occurence une chaîne de caractères commençant par un \texttt{\textasciigrave} qu'on appelle backtick (c'est un accent grave) et finissant par un backtick également \texttt{\textasciigrave}, il faut l'appeller.
+
+
+\begin{verbatim}
+    import homeView from "./src/js/views/home-view/home-view.js
+
+    const root = document.getElementById( "root" )
+    root.innerHTML = homeView()
+\end{verbatim}
+
+\paragraph{Explications}
+
+Ci-dessus nous appelons la fonction homeView() que nous avons rendue exportable avec :
+\begin{verbatim}
+    export default homeView()
+\end{verbatim}
+
+Nous avons ici assigné la valeur que représente l'appel à la fonction homeView() autrement dit la chaîne de caractères qu'elle retourne comme valeur de la propriété innerHTML de l'objet root
+
+Par conséquent sur le HTML de la page du navigateur contient maintenant la chose suivante:
+
+\begin{verbatim}
+    <div id="root">
+        <main>
+            <h1>Home View</h1>
+        </main>
+    </div>
+\end{verbatim}
+
+\end{document}
