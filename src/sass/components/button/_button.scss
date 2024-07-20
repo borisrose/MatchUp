@@ -1,0 +1,10 @@
+@use "../../abstracts/keyframes";
+
+
+.button {    
+
+    animation: move-to-center 300 ms easynow forwards;
+    opacity: 0;
+}
+
+
