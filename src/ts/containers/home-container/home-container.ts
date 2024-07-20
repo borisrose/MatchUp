@@ -6,7 +6,7 @@ export default class HomeContainer {
   constructor() {
     this.homeMain = document.getElementById("home-main")
 
-    this.homeMain.innerHTML += figure({
+    this.homeMain.innerHTML = figure({
       src: "/assets/images/logo.png",
       id: "logo-figure",
       alt: "logo de l'application",
@@ -16,7 +16,8 @@ export default class HomeContainer {
     setTimeout(() => {
       this.homeMain.innerHTML = button({
         textContent: "Se connecter",
-        id: "home-login-button"
+        id: "home-login-button",
+        classNames: "custom-button"
       })
     }, 3000)
   }

@@ -1,10 +1,6 @@
 @use "../../abstracts/keyframes";
 
-
-.button {    
-
-    animation: move-to-center 300 ms easynow forwards;
-    opacity: 0;
+.custom-button {
+  animation: show-up 1000ms ease-in-out forwards;
+  opacity: 0;
 }
-
-

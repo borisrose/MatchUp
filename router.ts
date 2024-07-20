@@ -1,4 +1,4 @@
-// router.ts
+//router.ts
 import homeView from "./src/ts/views/home-view/home-view"
 import Button from "./src/ts/components/button/button"
 import HomeContainer from "./src/ts/containers/home-container/home-container"
