@@ -4,6 +4,7 @@ interface ButtonProps {
   textContent: string
   type?: "reset" | "submit" | "button"
   classNames?: string
+  
 }
 
 // si vous écrivez que d impmlémente l'interface ButtonProps cela veut dire que d doit contenir obligatoirement un id  et un textContetn de type string mais que les deux autres propriétés sont optionnelles car dans la définition de l'interface elles sont suivies d'une ?
