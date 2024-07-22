@@ -21,6 +21,11 @@ figure {
   padding: 0;
 }
 
+
+a {
+  color: #000;
+}
+
 img {
   object-fit: cover;
   width: 100%;
@@ -30,4 +35,6 @@ img {
 main {
   display: flex;
   min-height: 100vh;
+  padding-top: 8vh;
+
 }

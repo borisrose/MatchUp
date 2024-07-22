@@ -2,7 +2,8 @@
 import homeView from "./src/ts/views/home-view/home-view"
 import Button from "./src/ts/components/button/button"
 import HomeContainer from "./src/ts/containers/home-container/home-container"
-
+import logView from "./src/ts/views/log-view/log-view";
+import header from "./src/ts/layout/header/header";
 /* 
 
     c'est ici que vous allez gérer la logique de routage autrement dit la logique qui en fonction de la valeur de window.location.hash donc la valeur du fragment dans l'url (le fragment commençant par #) 
@@ -36,7 +37,7 @@ function navigateToPage(h: string): void {
   // vu que cette fonction ne va pas être exécuté uniquement au démarrage de l'application mais également quand l'url va changer via les ancres <a href=""></a> notamment je dois vider le contenu de la div car une autre vue aurait pu s'y trouver comme la home-view ou la log-view ou la not-found-view
 
   root.innerHTML = "" // je vide le contenu de l'élement HTML ayant root comme id
-
+  root.innerHTML += header() // Bonjour
   // à ce niveau j'aurai et je mettrai à un moment donné les éléments de layout qui ne dépendent pas d'une vue particulière et qui doivent être présents quelle que soit la page / la vue
 
   // par exemple header et le composant qui contiendra mes messages de notification aux utilisateurs
@@ -61,6 +62,7 @@ function navigateToPage(h: string): void {
     case "#login":
       // ici on veut afficher la vue qui correspond à la page de connexion
       console.log("🟢 page login")
+      root.innerHTML += logView()
       break
     default:
       // il s'agit du cas par défault si h n'a aucune des valeurs définis par les cas ci-dessus

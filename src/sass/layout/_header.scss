@@ -1,0 +1,46 @@
+@use "../abstracts/keyframes";
+@use "../abstracts/variables";
+
+.header {
+   // ici se trouvent des propriétés css / règles css 
+
+   background-color:rgba(0,0,0,0.5);
+   height: 8vh;
+   display: flex;
+   // gérer le comportement des enfants
+   align-items: center;
+   padding-inline: 10px;
+   justify-content: space-between;
+   animation-name: show-down;
+   animation-duration: 2s;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+   opacity: 0;
+
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 20;
+
+   figure {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: solid #ffffff 2px;
+   }
+
+
+   a {
+      color: #ffffff;
+      margin-inline: 10px;
+      font-size: 18px;
+
+      &:hover {
+         color: variables.$primary-color;
+      }
+   }
+
+
+}

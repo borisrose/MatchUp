@@ -2,6 +2,8 @@
 @use "./src/sass/base/typography";
 @use "./src/sass/abstracts/keyframes";
 @use "./src/sass/base/base";
+@use "./src/sass/layout/header";
 @use "./src/sass/components/button/button";
 @use "./src/sass/components/logo/logo";
 @use "./src/sass/pages/homes";
+@use "./src/sass/pages/log";
