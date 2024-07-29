@@ -1,10 +1,12 @@
 @use "./src/sass/vendor/bulma";
 @use "./src/sass/base/tipography";
+@use "./src/sass/base/base";
 @use "./src/sass/abstracts/variables";
 @use "./src/sass/abstracts/keyframes";
 @use "./src/sass/abstracts/extensions";
 @use "./src/sass/abstracts/mixins";
 
+@use "./src/sass/layout/notification";
 @use "./src/sass/layout/header";
 
 @use "./src/sass/components/shared/button";

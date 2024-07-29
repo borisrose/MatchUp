@@ -5,7 +5,7 @@ const HtmlPlugin = require("html-webpack-plugin")
 const CopyPlugin = require("copy-webpack-plugin")
 
 module.exports = {
-    entry:"./src/main.ts", 
+    entry:"./main.ts", 
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist")
@@ -32,7 +32,7 @@ module.exports = {
     },
     plugins: [
         new HtmlPlugin({
-            template: "./src/index.html"
+            template: "index.html"
         }),
         new CopyPlugin({
             patterns: [

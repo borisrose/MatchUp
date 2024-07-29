@@ -1,3 +1,14 @@
 .field {
     margin-block: 5px;
+    display: flex;
+    flex-direction: column;
+
+    &__error {
+        min-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+
+
 }

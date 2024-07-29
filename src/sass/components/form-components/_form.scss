@@ -1,0 +1,24 @@
+.custom-form {
+    
+    & > section {
+        display: flex;
+    }
+
+    & > section:first-of-type {
+
+        flex-direction: column;
+    }
+
+    & > section:nth-last-of-type(2) {
+ 
+        justify-content:space-between;
+        padding-block: 5px;
+     
+    
+    }
+
+    & > section:last-of-type {
+        min-height: 20px;
+        align-items: center;
+    }
+}
