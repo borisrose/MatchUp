@@ -1,3 +1,5 @@
+@use "../../abstracts/variables";
+
 .custom-form {
     
     & > section {
@@ -18,7 +20,9 @@
     }
 
     & > section:last-of-type {
-        min-height: 20px;
+        min-height: 30px;
         align-items: center;
+        color: variables.$failure-color;
+        padding-inline: 2px;
     }
 }

@@ -1,3 +1,4 @@
+@use "../../abstracts/variables";
 .field {
     margin-block: 5px;
     display: flex;
@@ -7,6 +8,10 @@
         min-height: 30px;
         display: flex;
         align-items: center;
+        color: variables.$failure-color;
+        p {
+            padding: 2px;
+        }
     }
 
 
