@@ -2,6 +2,7 @@ import button from "../../components/button/button"
 
 function homeView() {
 	const buttonProps = {
+        id: "home-login-button",
 		textContent: "Se connecter",
 	}
 

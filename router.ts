@@ -3,6 +3,7 @@ import homeView from "./src/ts/views/home-view/home-view"
 import LogContainer from "./src/ts/containers/log-container/log-container"
 import header from "./src/ts/layout/header/header"
 import notification from "./src/ts/layout/notification/notification"
+import HomeContainer from "./src/ts/containers/home-container/home-container"
 
 declare global {
 	interface Window {
@@ -28,6 +29,7 @@ function navigateToPage(h: string) {
 		case "":
 			console.log("On Home Page")
 			root.innerHTML += homeView()
+			new HomeContainer(window.onNavigate)
 			break
 		case "#login":
 			console.log("On Login Page")

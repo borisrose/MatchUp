@@ -1,17 +1,16 @@
+import BusinessLogicContainer from "../../models/business-logic-container"
 import FormatCheckService from "../../services/format-check-service/format-check-service"
 import NotificationService from "../../services/notification-service/notification-service"
 
-class LogContainer {
-	notificationService: NotificationService
+class LogContainer extends BusinessLogicContainer {
 	formatCheckService: FormatCheckService
 	emailInput: HTMLInputElement
 	passwordInput: HTMLInputElement
 	formErrors: HTMLElement
-	onNavigate: (h: string) => void
 
 	constructor(onNavigate: (h: string) => void) {
+		super(onNavigate)
 		this.onNavigate = onNavigate
-		this.notificationService = new NotificationService()
 		this.formatCheckService = new FormatCheckService()
 		let form = document.getElementById("log-form")
 		form.addEventListener("submit", this.onSubmit.bind(this))

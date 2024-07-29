@@ -8,8 +8,9 @@
 		"target": "ES2022",
 		"module": "NodeNext",
 		"lib": ["DOM", "ES2015"],
-		"moduleResolution": "NodeNext"
+		"moduleResolution": "NodeNext",
+		"types": ["jest"]
 	},
-	"include": ["src/**/*.ts"],
+	"include": ["src/**/*.ts", "__test__/*.ts"],
 	"exclude": ["node_modules"]
 }
