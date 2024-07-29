@@ -2,28 +2,29 @@
 @use "../abstracts/mixins";
 
 .custom-header {
-    @extend %fixed-top;
-    @include mixins.flex-box(row, center);
-    justify-content: space-between;
-    height: 8vh;
-    background-color: rgba($color: #000000, $alpha: 0.5);
+	@extend %fixed-top;
+	@include mixins.flex-box(row, center);
+	justify-content: space-between;
+	height: 8vh;
+	background-color: rgba($color: #000000, $alpha: 0.5);
 
-    padding-inline: 10px;
+	padding-inline: 10px;
 
-    figure {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        overflow: hidden;
-    }
+	figure {
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
 
-    nav, ul {
-        display: flex;
-        li {
-            margin-inline: 10px;
-            a {
-                color: #fff;
-            }
-        }
-    }
+	nav,
+	ul {
+		display: flex;
+		li {
+			margin-inline: 10px;
+			a {
+				color: #fff;
+			}
+		}
+	}
 }

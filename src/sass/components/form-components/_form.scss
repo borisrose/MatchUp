@@ -1,28 +1,23 @@
 @use "../../abstracts/variables";
 
 .custom-form {
-    
-    & > section {
-        display: flex;
-    }
+	& > section {
+		display: flex;
+	}
 
-    & > section:first-of-type {
+	& > section:first-of-type {
+		flex-direction: column;
+	}
 
-        flex-direction: column;
-    }
+	& > section:nth-last-of-type(2) {
+		justify-content: space-between;
+		padding-block: 5px;
+	}
 
-    & > section:nth-last-of-type(2) {
- 
-        justify-content:space-between;
-        padding-block: 5px;
-     
-    
-    }
-
-    & > section:last-of-type {
-        min-height: 30px;
-        align-items: center;
-        color: variables.$failure-color;
-        padding-inline: 2px;
-    }
+	& > section:last-of-type {
+		min-height: 30px;
+		align-items: center;
+		color: variables.$failure-color;
+		padding-inline: 2px;
+	}
 }

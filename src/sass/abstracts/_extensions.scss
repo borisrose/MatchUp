@@ -1,16 +1,14 @@
 %fixed-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 20;
 }
 
 %bg {
-    
-    background-image: url("/assets/bg.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+	background-image: url("/assets/bg.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }

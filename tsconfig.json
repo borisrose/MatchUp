@@ -1,16 +1,15 @@
 {
-    "compilerOptions": {
-        "allowJs": true,
-        "checkJs": true,
-        "esModuleInterop": true,
-        "noImplicitAny": true,
-        "skipLibCheck": true,
-        "target": "ES2022",
-        "module": "NodeNext",
-        "lib": ["DOM", "ES2015"],
-        "moduleResolution": "NodeNext"
-    },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules"]
-    
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"noImplicitAny": true,
+		"skipLibCheck": true,
+		"target": "ES2022",
+		"module": "NodeNext",
+		"lib": ["DOM", "ES2015"],
+		"moduleResolution": "NodeNext"
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules"]
 }

@@ -1,5 +1,5 @@
-function logView () {
-    return `
+function logView() {
+	return `
 
         <main class="main log__main">
 
@@ -42,7 +42,6 @@ function logView () {
     
     
     `
-
 }
 
 export default logView

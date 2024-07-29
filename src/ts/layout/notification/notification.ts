@@ -1,5 +1,5 @@
 export default function () {
-    return `
+	return `
         <aside id="notification" class="custom-notification"> TEST </aside>
     
     `

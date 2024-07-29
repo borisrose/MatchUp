@@ -1,19 +1,15 @@
 @use "../abstracts/mixins";
 
 .log {
+	&__main {
+		@include mixins.flex-box(column, center);
+		justify-content: center;
+		@include mixins.set-bg(0.5, true);
+	}
 
-    &__main {
-        @include mixins.flex-box(column, center);
-        justify-content: center;
-        @include mixins.set-bg(0.5, true);
-
-    
-    }
-
-
-    &__form {
-        width: 400px;
-        padding: 10px;
-        box-shadow: 0 0 5px #000;
-    }
+	&__form {
+		width: 400px;
+		padding: 10px;
+		box-shadow: 0 0 5px #000;
+	}
 }

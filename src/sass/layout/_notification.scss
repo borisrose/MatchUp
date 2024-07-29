@@ -1,35 +1,33 @@
 @use "../abstracts/variables";
 @use "../abstracts/keyframes";
 
-
 .custom-notification {
-    position: fixed;
-    bottom: 10px;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    z-index: 20;
+	position: fixed;
+	bottom: 10px;
+	align-self: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	z-index: 20;
 
-   
-    .flash {
-        border-radius: 5px;
-        padding: 5px;
-        opacity: 0;
-        animation: show-up 1s ease-in-out forwards;
-        color: #000;
-    }
+	.flash {
+		border-radius: 5px;
+		padding: 5px;
+		opacity: 0;
+		animation: show-up 1s ease-in-out forwards;
+		color: #000;
+	}
 
-    .flash--info {
-        background-color: variables.$info-color;
-    }
+	.flash--info {
+		background-color: variables.$info-color;
+	}
 
-    .flash--success {
-        background-color: variables.$success-color;
-    }
+	.flash--success {
+		background-color: variables.$success-color;
+	}
 
-    .flash--failure {
-        background-color: variables.$failure-color;
-    }
+	.flash--failure {
+		background-color: variables.$failure-color;
+	}
 }

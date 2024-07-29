@@ -1,9 +1,14 @@
 @use "../abstracts/mixins";
 .home {
+	//.home__main
+	&__main {
+		flex-direction: column;
+		@include mixins.set-bg();
+		align-items: center;
+		justify-content: center;
 
-    &__main {
-        flex-direction: column;
-        @include mixins.set-bg()      
-    }
+		button {
+			align-self: center;
+		}
+	}
 }
-

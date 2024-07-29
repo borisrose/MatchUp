@@ -1,5 +1,5 @@
 export default function () {
-  return `
+	return `
 
         <header class="header custom-header">
             <a href="">
@@ -21,5 +21,5 @@ export default function () {
     
         </header>
     
-    `;
+    `
 }

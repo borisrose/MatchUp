@@ -1,15 +1,15 @@
 @use "./extensions";
 
-@mixin flex-box($dir: row, $align: flex-start){
-    display: flex;
-    flex-direction: $dir;
-    align-items: $align;
+@mixin flex-box($dir: row, $align: flex-start) {
+	display: flex;
+	flex-direction: $dir;
+	align-items: $align;
 }
 
-@mixin set-bg($alpha: 0.5, $overlay: false){
-    @if $overlay == true {
-        background-color: rgba(0, 0, 0, $alpha);
-        background-blend-mode: color
-    }
-    @extend %bg;
+@mixin set-bg($alpha: 0.5, $overlay: false) {
+	@if $overlay == true {
+		background-color: rgba(0, 0, 0, $alpha);
+		background-blend-mode: color;
+	}
+	@extend %bg;
 }

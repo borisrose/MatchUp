@@ -1,19 +1,16 @@
 @use "../../abstracts/variables";
 .field {
-    margin-block: 5px;
-    display: flex;
-    flex-direction: column;
+	margin-block: 5px;
+	display: flex;
+	flex-direction: column;
 
-    &__error {
-        min-height: 30px;
-        display: flex;
-        align-items: center;
-        color: variables.$failure-color;
-        p {
-            padding: 2px;
-        }
-    }
-
-
-
+	&__error {
+		min-height: 30px;
+		display: flex;
+		align-items: center;
+		color: variables.$failure-color;
+		p {
+			padding: 2px;
+		}
+	}
 }
