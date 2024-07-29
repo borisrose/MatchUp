@@ -1,0 +1,9 @@
+@use "../abstracts/mixins";
+.home {
+
+    &__main {
+        flex-direction: column;
+        @include mixins.set-bg()      
+    }
+}
+

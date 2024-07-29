@@ -1,0 +1,12 @@
+@use "../abstracts/mixins";
+
+.log {
+
+    &__main {
+        @include mixins.flex-box(column, center);
+        justify-content: center;
+        @include mixins.set-bg(0.5, true);
+
+    
+    }
+}
