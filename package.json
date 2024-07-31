@@ -36,7 +36,9 @@
 		"webpack-dev-server": "^5.0.4"
 	},
 	"jest": {
-		"setupFiles": ["./__test__/setup-test.ts"],
+		"setupFiles": [
+			"./__test__/setup-test.ts"
+		],
 		"testEnvironment": "jsdom",
 		"collectCoverage": true,
 		"collectCoverageFrom": [

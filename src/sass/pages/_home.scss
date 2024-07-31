@@ -1,12 +1,12 @@
 @use "../abstracts/mixins";
+
 .home {
-	//.home__main
+	// home__main
 	&__main {
 		flex-direction: column;
 		@include mixins.set-bg();
 		align-items: center;
 		justify-content: center;
-
 		button {
 			align-self: center;
 		}

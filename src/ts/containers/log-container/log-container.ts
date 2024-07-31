@@ -1,5 +1,7 @@
 import BusinessLogicContainer from "../../models/business-logic-container"
+import AuthService from "../../services/auth-service/auth-service"
 import FormatCheckService from "../../services/format-check-service/format-check-service"
+import LocalStorageService from "../../services/localstorage-service/localstorage-service"
 import NotificationService from "../../services/notification-service/notification-service"
 
 class LogContainer extends BusinessLogicContainer {
@@ -7,11 +9,17 @@ class LogContainer extends BusinessLogicContainer {
 	emailInput: HTMLInputElement
 	passwordInput: HTMLInputElement
 	formErrors: HTMLElement
+	authService: AuthService
+	localstorageService: LocalStorageService
+	isLoggingIn: boolean
 
-	constructor(onNavigate: (h: string) => void) {
+	constructor(onNavigate: (h: string) => void, isLoggingIn: boolean) {
 		super(onNavigate)
 		this.onNavigate = onNavigate
+		this.isLoggingIn = isLoggingIn
 		this.formatCheckService = new FormatCheckService()
+		this.authService = new AuthService("http://localhost:8095")
+		this.localstorageService = new LocalStorageService()
 		let form = document.getElementById("log-form")
 		form.addEventListener("submit", this.onSubmit.bind(this))
 
@@ -19,9 +27,16 @@ class LogContainer extends BusinessLogicContainer {
 		this.passwordInput = document.getElementById("password") as HTMLInputElement
 		this.formErrors = document.getElementById("form-errors")
 
-		this.notificationService.notif = {
-			type: "info",
-			content: "Page de connexion",
+		if (this.isLoggingIn) {
+			this.notificationService.notif = {
+				type: "info",
+				content: "Page de connexion",
+			}
+		} else {
+			this.notificationService.notif = {
+				type: "info",
+				content: "Page d'inscription",
+			}
 		}
 	}
 
@@ -65,7 +80,7 @@ class LogContainer extends BusinessLogicContainer {
 		return isEmailFormatValid && isPasswordFormatValid
 	}
 
-	onSubmit(event: any) {
+	async onSubmit(event: any) {
 		// handler / gestionnaire
 		event.preventDefault()
 
@@ -80,9 +95,24 @@ class LogContainer extends BusinessLogicContainer {
 					type: "success",
 					content: "Connexion en cours",
 				}
-				setTimeout(() => {
-					this.onNavigate("")
-				}, 3000)
+
+				this.authService
+					.login({ email: result.emailValue, password: result.passwordValue })
+					.then(() => {
+						const token = this.localstorageService.getSpecificItem("token")
+						if (token) {
+							setTimeout(() => {
+								this.onNavigate("#dashboard")
+							}, 3000)
+						} else {
+							setTimeout(() => {
+								this.notificationService.notif = {
+									type: "failure",
+									content: "Échec de la connexion",
+								}
+							}, 3000)
+						}
+					})
 			}
 		}
 	}

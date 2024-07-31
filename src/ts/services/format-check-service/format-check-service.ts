@@ -9,7 +9,7 @@ class FormatCheckService {
 	}
 
 	checkPassword(p: string) {
-		const pattern = new RegExp(/^[a-z0-9._ïûüàéè!?$_-]{12,20}$/i)
+		const pattern = new RegExp(/^[a-z0-9._ïûüàéè!?$_-]{6,20}$/i)
 		return pattern.test(p)
 	}
 }

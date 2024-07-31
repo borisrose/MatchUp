@@ -34,7 +34,11 @@ function navigateToPage(h: string) {
 		case "#login":
 			console.log("On Login Page")
 			root.innerHTML += logView()
-			new LogContainer(window.onNavigate)
+			new LogContainer(window.onNavigate, true)
+			break
+		case "#register":
+			root.innerHTML += logView(false)
+			new LogContainer(window.onNavigate, false)
 			break
 		default:
 			root.innerHTML += "404"

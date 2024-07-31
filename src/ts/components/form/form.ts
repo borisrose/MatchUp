@@ -1,26 +1,24 @@
-import button from "../button/button";
-import field from "./field/field";
-
+import button from "../button/button"
+import field from "./field/field"
 
 interface FormProps {
-    id: string,
-    fields: Array<{
-        icon: string,
-        id: string,
-        type: string,
-        placeholder: string
-    }>
-    buttons: Array<{
-        id: string,
-        textContent: string,
-        type?: "reset" | "submit" | "button",
-        classNames?: string
-    }>
+	id: string
+	fields: Array<{
+		icon: string
+		id: string
+		type: string
+		placeholder: string
+	}>
+	buttons: Array<{
+		id: string
+		textContent: string
+		type?: "reset" | "submit" | "button"
+		classNames?: string
+	}>
 }
 
 export default function (d: FormProps) {
-
-    return `
+	return `
 
         <form id="${d.id}" class="form custom-form">
                     <section class="form__fields">

@@ -1,15 +1,11 @@
-
 interface FieldProps {
-    icon: string,
-    id: string,
-    type: string,
-    placeholder: string
+	icon: string
+	id: string
+	type: string
+	placeholder: string
 }
 
-
 export default function (d: FieldProps) {
-
-
 	return `
          
 
