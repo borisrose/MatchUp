@@ -18,6 +18,7 @@ export default class HomeContainer {
         textContent: "Se connecter",
         id: "home-login-button",
         classNames: "custom-button"
+        
       })
     }, 3000)
   }
