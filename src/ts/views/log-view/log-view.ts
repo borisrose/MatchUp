@@ -8,14 +8,19 @@ function logView () {
 <form> 
 
 <section class="form__inputs">
-  <article>
+<h1 class="title-login">Connexion</h1>
 
-
-
-  </article>
-  <input type="email" placeholder="dupont@gmail.com"><input type="text">
+  <input type="email" placeholder="Dupont@gmail.com"></input>
+  <input type="password" placeholder="Mots de passe"></input>
 </section>
-<section class="form__buttons"></section>
+<section class="form__buttons">
+
+<input id="login_button" type="submit" value="Connectez-vous"></input><input id="reset_button" type="reset" value="Réinitialiser"></input>
+<p class="text-login">Pas encore inscrit(e) ? <a href="inscription">Cliquez ici !</a></p> 
+
+
+
+</section>
 
 </form>
 

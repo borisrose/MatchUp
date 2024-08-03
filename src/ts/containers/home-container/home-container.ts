@@ -17,8 +17,7 @@ export default class HomeContainer {
       this.homeMain.innerHTML = button({
         textContent: "Se connecter",
         id: "home-login-button",
-        classNames: "custom-button"
-        
+        classNames: "custom-button",	
       })
     }, 3000)
   }

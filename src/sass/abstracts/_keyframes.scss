@@ -29,31 +29,6 @@
     transform: translateY(0);
   }
 }
-
-@keyframes move-to-center {
-  0% {
-    opacity: 0;
-    transform: translateY(-300px);
-  }
-
-  50% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  70% {
-    opacity: 1;
-    transform: translateX(-100px);
-
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(-100px);
-
-  }
-}
-
 @keyframes curve-movement {
   0% {
     transform: translate(-50%, -100%) scale(1);
@@ -70,6 +45,6 @@
   100% {
     transform: translate(-100%, 0) scale(0.4);
     top: -3%;
-    left: 5%;
+    left: 26%;
   }
 }
