@@ -1,6 +1,7 @@
 @use "../../abstracts/keyframes";
 
 .logo {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -10,6 +11,7 @@
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  opacity: 0;
-  animation: move-to-center 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  opacity: 1;
+  // animation: move-to-center 3s ease-in-out forwards;
+  animation: curve-movement 3s ease-in-out forwards;
 }
