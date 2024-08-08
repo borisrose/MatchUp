@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+        "target": "ES2015",
+        "moduleResolution": "NodeNext",
+        "esModuleInterop": true,
+        "allowJs": true,
+        "checkJs": true,
+        "noImplicitAny": true
+    },
+    "include": ["./main.ts", "./app/ts/**.ts"],
+    "exclude": [
+        "node_modules"
+    ]
+}

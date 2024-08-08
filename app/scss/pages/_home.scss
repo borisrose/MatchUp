@@ -1,0 +1,12 @@
+@use "../abstracts/mixins";
+
+.home {
+    // cela n'existe pas comme sélecteur 
+    &__main {
+        // cela revient à écrire home__main 
+        @include mixins.flex-box(column, center, center);
+        @include mixins.set-bg()
+
+
+    }
+}

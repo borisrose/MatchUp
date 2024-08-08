@@ -1,0 +1,18 @@
+@use "../abstracts/mixins";
+
+.app-header {
+    @include mixins.flex-box(row, center, space-between);
+    @include mixins.position();
+    box-shadow: 0 0 5px #000;
+    padding-inline: 10px;
+    height: 8vh;
+    z-index: 20;
+
+    figure {
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 50%;
+
+    }
+}

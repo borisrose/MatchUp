@@ -1,0 +1,30 @@
+
+
+@mixin flex-box ($dir: row, $align: flex-start, $justif: flex-start) {
+    display: flex;
+    flex-direction: $dir;
+    align-items: $align;
+    justify-content: $justif;
+}
+
+@mixin position ($pos: fixed, $isOnTop: true) {
+    position: $pos;
+    @if $isOnTop == true {
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+
+@mixin set-bg ($darken: false, $alpha: 0.5) {
+    background-image: url("/assets/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @if $darken == true {
+        background-color: rgba($color: #000000, $alpha: $alpha);
+        background-blend-mode: color;
+    }
+}
