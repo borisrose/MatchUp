@@ -21,10 +21,18 @@ import header from "./src/ts/layout/header/header";
 // avec TS je peux définir un type
 type OnNavigateType = (h: string) => void
 
+declare global {
+  interface Window {
+    onNavigate: OnNavigateType
+  }
+}
+
+window.onNavigate = navigateToPage
+
 // cette fonction va être utilisée au moment du démarrage de l'application à l'intérieur de la fonction anonyme ci-dessous
 function navigateToPage(h: string): void {
   //on veut récupérer dans une fonction la seule div qui est écrite "en dur" dans l'index.html . Pourquoi ? Parce que c'est à l'intérieur d'elle dans son innerHTML que l'on veut faire vivre notre application et dynamiser l'application en passe d'une vue à une autre. Autrement dit les différentes pages/vues de l'application seront entre <div id="root"> et </div>
-
+  console.log("h", h)
   // Encore faut-il récupérer l'élément html ayant l'id root dans une variable pour changer son contenu avec la vue qui est fonction de la valeur de h
 
   // je définis donc une variable qui aura un nom cohérent à son contenu
@@ -56,14 +64,14 @@ function navigateToPage(h: string): void {
       // donc on va considérer que le contenu de l'élément HTML ayant l'id root sera cette vue home-view
 
       root.innerHTML += homeView()
-      new HomeContainer()
+      new HomeContainer(window.onNavigate)
 
       break // le break évite qu'on bascule dans le cas suivant et que donc on exécute les instructions du cas suivant
     case "#login":
       // ici on veut afficher la vue qui correspond à la page de connexion
       console.log("🟢 page login")
       root.innerHTML += logView()
-      break
+      break;
     default:
       // il s'agit du cas par défault si h n'a aucune des valeurs définis par les cas ci-dessus
       console.log("🔴 404 not found")
