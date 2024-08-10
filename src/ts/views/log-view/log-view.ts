@@ -35,8 +35,8 @@ function logView(isLoggingIn: boolean = true) {
 	}
 
 	if (!isLoggingIn) {
-		const email = formData.fields.pop()
 		const password = formData.fields.pop()
+		const email = formData.fields.pop()
 		formData.fields.push(
 			{
 				icon: "fa-user",
